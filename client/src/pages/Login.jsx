@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {toast} from 'react-hot-toast'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
  const Login = () => {
     const [loginDetails,setLoginDetails]=useState({email:"",password:""});
     const navigate=useNavigate()
@@ -37,6 +37,8 @@ import { useNavigate } from 'react-router-dom';
             <input type="password" name="password" placeholder='password' onChange={handleChange} value={loginDetails.password} />
             <input type="submit" onClick={handleSubmit} value="Login" />
         </form>
+
+        <div>don't have an account ? <Link to="/signup">singup</Link></div>
     </div>
   )
 }
