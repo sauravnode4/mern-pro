@@ -2,6 +2,7 @@ const express=require('express');
 const connetDb = require('./db/dbConnect');
 const userRouter = require('./route/userRouter');
 const cors=require('cors');
+const noteRouter = require('./route/noteRouter');
 const app=express();
 
 app.use(cors())
@@ -12,7 +13,7 @@ connetDb();
 
 
 app.use('/api/v1/user',userRouter);
-
+app.use('/api/v1/note',noteRouter);
 app.listen(2000,()=>{
     console.log("server is running");
 });

@@ -2,8 +2,7 @@ const jwt=require('jsonwebtoken');
 
 const verifyToken=async (req ,res,next)=>{
     const bearerToken=req.headers.authorization;
-
-    if(! bearerToken){
+    if(! bearerToken){ 
         return res.status(401).json({status:false,message:"Access Denied. Access token required"})
     }
 
