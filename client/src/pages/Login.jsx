@@ -39,6 +39,9 @@ import { Link, useNavigate } from 'react-router-dom';
         </form>
 
         <div>don't have an account ? <Link to="/signup">singup</Link></div>
+
+
+        <div><Link to="/forgetPassword">forget password</Link></div>
     </div>
   )
 }
